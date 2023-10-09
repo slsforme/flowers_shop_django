@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block links %}{% endblock links %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+        <header>
+            {% block header %}
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../routing/templates/routing/home">Основная страница</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'flowers Catalogue' %}">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Personal Cabinet' %}">Личный кабинет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Shopping Cart' %}">Корзина</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'API' %}">API</a>
+          </li>
+     </ul>
+    {% endblock header %}
+    </header>
+
+    <main>
+       {% block main %}{% endblock main %}
+    </main>
+
+    <footer>
+        {% block footer %}
+
+    {% endblock footer %}
+    </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color:ghostwhite;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+a:hover{
+    color:papayawhip;
+    transition: color .5s;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+

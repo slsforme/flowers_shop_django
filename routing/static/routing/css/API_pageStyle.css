@@ -1,0 +1,112 @@
+@import "defaultStyle.css";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+
+
+main {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.CRUD-functions {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 800px;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    /*background: linear-gradient(89.5deg, rgb(4, 29, 55) -0.1%, rgb(47, 71, 139) 25.1%, rgb(28, 133, 243) 49.6%, rgb(115, 181, 250) 74.5%, rgb(214, 239, 253) 99.3%);*/
+}
+
+.CRUD-functions li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+.CRUD-functions a {
+    color: #f0f8ff;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    display: inline-block;
+    position: relative;
+}
+
+.CRUD-list {
+    padding-top: 3%;
+    padding-left: 15%;
+}
+
+.CRUD-functions a:after {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color:#f0f8ff ; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.75s ease-out; /*задаём время анимации*/
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+a:hover{
+    color:#fff5ee;
+}
+
+h1{
+    transform: scale(1.65);
+}
+
+.page{
+    padding-top: 20%;
+    margin-left: 21%;
+    font-family: 'Roboto', sans-serif;
+    color: papayawhip;
+}
+
+
+/*Стили светлой темы*/
+.light-theme .page {
+    color: #fc9e9e;
+}
+
+.light-theme a:hover{
+    color: #fdc0d2;
+}
+
+.pressed-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 40px;
+    margin-top: 15px;
+    border: none;
+  border-radius: 30px;
+  background-image: linear-gradient(45deg, #fdf7c9 0%, #282828 50%, #fff7ab 100%);
+  background-position: 100% 0;
+  background-size: 200% 200%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  transition: .5s;
+}
+.pressed-button:hover {
+  box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+}
+
+.light-theme .pressed-button{
+    background-image: linear-gradient(45deg, #ffffff  0%, #fa8eb5 50%, #fdd4e7 100%);
+}

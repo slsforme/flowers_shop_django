@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block links %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href ={% static 'routing/css/homeStyle.css' %}>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+{% endblock links %}
+
+{% block title %} FlowersShop {% endblock title %}
+
+{% block main %}
+    <div class = "picture">
+            <img src="../../routing/static/routing/img/white-flowers.png" alt="Цветок на черном фоне" width="1200" height="700">
+            <div class="centered-text"><h1>Цветы - остатки Рая на земле.</h1></div>
+            <div class="text-under-centered-text"><h2>FlowersShop - топ 1 магазин цветов в РФ.</h2></div>
+        </div>
+        <div class="gradient-background">
+        </div>
+{% endblock main %}
