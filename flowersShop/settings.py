@@ -20,6 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -109,16 +110,16 @@ LANGUAGES = (
     ('ru', 'Russian')
 )
 
-# LOCALE_PATHS = (
-#     'locale',
-#     os.path.join(BASE_DIR, 'locale'),
-# )
-
 TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
 USE_TZ = True
+
+# LOCALE_PATHS = (
+#     'locale',
+#     os.path.join(BASE_DIR, 'locale'),
+# )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

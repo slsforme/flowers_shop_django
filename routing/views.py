@@ -27,14 +27,6 @@ def pions_page(request):
     return render(request, 'routing/flowers_assortment/roses.html')
 
 
-def add_flowers(request):
-    return render(request, 'routing/add_flowers.html')
-
-
-def change_flowers(request):
-    return render(request, 'routing/change_flowers.html')
-
-
 def feedback(request):
     return render(request, 'routing/feedback.html')
 
@@ -58,3 +50,6 @@ def delete_Positions(request):
 def read_Positions(request):
     return render(request, 'routing/CRUD_pages/read_Positions.html')
 
+
+def sign_page(request):
+    return render(request, 'routing/sign_page.html')
