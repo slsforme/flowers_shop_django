@@ -14,9 +14,9 @@ I used here:
 
 -  Add some SCSS and learn it by using it in this project
 
-- Fully end back-end
+- Fully make back-end
 
-<h2>Useful links which helped me and can help others to develop a website back-end/front-end</h2>
+<h2>Useful links which helped me and can help others to develop a website's back-end/front-end</h2>
 
 https://msiter.ru/articles/60-klassnykh-knopok-na-css-s-animaciey
 
