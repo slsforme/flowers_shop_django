@@ -14,4 +14,5 @@ urlpatterns = [
     path('create_Positions', views.create_Positions, name='Create Positions'),
     path('delete_Positions', views.delete_Positions, name='Delete Positions'),
     path('read_Positions', views.read_Positions, name='Read Positions'),
+    path('sign_page', views.read_Positions, name='SignIn_SignUp Page')
 ]
