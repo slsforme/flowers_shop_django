@@ -32,6 +32,6 @@ https://fonts.google.com/
 
 https://getbootstrap.com/ (Bootstrap)
 
-For those, who starting workng with Flex-Boxes:
+For those, who starting working with Flex-Boxes:
 
 https://habr.com/ru/articles/467049/

@@ -1,39 +1,37 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'routing/css/API_pageStyle.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <title>FlowersShop - API</title>
-</head>
-<body>
-    <main>
-        <img id="theme-image" src="{% static 'routing/img/dark-theme-golden-image.jpg' %}" alt="golden-black image" height="50%" width="100%">
-        <div class="CRUD-functions">
+
+{% block links %}
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="{% static 'routing/css/API_pageStyle.css' %}">
+{% endblock links %}
+
+{% block title %}
+    FlowersShop - API
+{% endblock title %}
+
+{% block nav %}
+    <div class="CRUD-functions">
             <div class="page">
                 <h1>Страница API</h1>
             </div>
+
             <div class="CRUD-list">
                 <ul>
                      <li><a href="{% url 'Create Positions' %}">Добавить позицию</a></li>
                      <li><a href="{% url 'Change Positions' %}">Изменить позицию</a></li>
                      <li><a href="{% url 'Delete Positions' %}">Удалить позицию</a></li>
                      <li><a href="{% url 'Read Positions' %}">Просмотреть позицию</a></li>
-                    <li><a href="{% url 'Home' %}">Вернуться на главную страницу</a></li>
-                    <li><button class="pressed-button" id="theme-button">Сменить тему</button></li>
+                     <li><a href="{% url 'Home' %}">Вернуться на главную страницу</a></li>
+                    {#<li><button class="pressed-button" id="theme-button">Сменить тему</button></li>#}
                 </ul>
             </div>
         </div>
-    </main>
-
-   <script>
+{% endblock nav %}
+{% comment Необходимо доработать - изменять фотографию тега main. %}
+{% block script %}
+<script>
     const themeImage = document.getElementById('theme-image');
     const themeButton = document.getElementById('theme-button');
 
@@ -43,15 +41,12 @@
             themeImage.src = "{% static 'routing/img/dark-theme-golden-image.jpg' %}";
         } else {
             themeImage.src = "{% static 'routing/img/light-theme-pink-image.jpg' %}";
-
         }
         // Toggle the "dark-theme" class for the body
             document.body.classList.toggle("light-theme");
-
     }
-
     // Add event listener to the theme button
     themeButton.addEventListener('click', toggleTheme);
 </script>
-</body>
-</html>
+{% endblock script %}
+{% endcomment %}

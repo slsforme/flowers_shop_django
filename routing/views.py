@@ -53,3 +53,15 @@ def read_Positions(request):
 
 def sign_page(request):
     return render(request, 'routing/sign_page.html')
+
+
+def chrysanthemums_page(request):
+    return render(request, 'routing/flowers_assortment/chrysanthemums.html')
+
+
+def bouquets_page(request):
+    return render(request, 'routing/flowers_assortment/bouquets.html')
+
+
+def agreement_page(request):
+    return render(request, 'routing/user_agreement.html')

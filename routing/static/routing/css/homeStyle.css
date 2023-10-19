@@ -1,30 +1,5 @@
 @import "defaultStyle.css";
 
-.nav-link{
-    color:ghostwhite;
-    transition: color .5s ease-in-out,background-color .5s ease-in-out,border-color .4s ease-in-out;
-}
-.nav{
-    --bs-nav-link-hover-color: papayawhip;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
-.nav-underline{
-    --bs-nav-underline-link-active-color: ghostwhite;
-}
-
-.nav-underline .nav-link.active{
-    font-weight: 400;
-}
-
-header ul{
-    background: black;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
 main{
     width: 100%;
     height: 100%;
@@ -34,6 +9,8 @@ main{
     height: 800px;
     width: 100%;
     background-color: black;
+    display: flex;
+    justify-content: space-between;
 }
 
 .picture img{

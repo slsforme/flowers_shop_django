@@ -1,21 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+{% block links %}
     <link rel="stylesheet" href ={% static 'routing/css/defaultStyle.css' %}>
-    <title>FlowersShop - Личный кабинет</title>
-</head>
-<body>
-    <header>
+{% endblock links %}
 
-    </header>
+{% block title %}
+    FlowersShop - Личный кабинет
+{% endblock title %}
 
-    <main>
-        <a href="{% url 'Home' %}">Вернуться обратно</a>
-    </main>
-</body>
-</html>
+{% block main %}
+    <a href="{% url 'Home' %}">Вернуться обратно</a>
+{% endblock main %}
+
