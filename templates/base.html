@@ -7,40 +7,46 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% block links %}{% endblock links %}
+    {% include "inc/_links.html" %}
+    {% block links %}
+        {% comment "Можно реализовать доп. ссылки, но не обязательно" %}
+        {%  endcomment %}
+    {% endblock links %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-        <header>
-            {% block header %}
-        <ul class="nav nav-underline">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../routing/templates/routing/home">Основная страница</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'flowers Catalogue' %}">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'Personal Cabinet' %}">Личный кабинет</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'Shopping Cart' %}">Корзина</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'API' %}">API</a>
-          </li>
-     </ul>
-    {% endblock header %}
+    <header>
+        {% include "inc/_header.html" %}
     </header>
 
+    <div>
+        {% block div %}
+            {% comment "Можно реализовать код, но не обязательно" %}
+            {%  endcomment %}
+        {% endblock div %}
+    </div>
+
+    <nav>
+        {% block nav %}
+            {% comment "Можно реализовать код, но не обязательно" %}
+            {%  endcomment %}
+        {% endblock nav %}
+    </nav>
+
     <main>
-       {% block main %}{% endblock main %}
+       {% block main %}
+            {% comment "Необходимо реализовать код" %}
+            {%  endcomment %}
+       {% endblock main %}
     </main>
 
     <footer>
-        {% block footer %}
-
-    {% endblock footer %}
+        {% include "inc/_footer.html" %}
     </footer>
+
+    {% block script %}
+        {% comment "Можно реализовать код, но не обязательно" %}
+        {%  endcomment %}
+    {% endblock script %}
 </body>
 </html>

@@ -2,8 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 
 
-main {
+nav {
     position: relative;
+    background-image: url("../../routing/img/dark-theme-golden-image.jpg");
+    width: 100%;
+    height: 100%;
 }
 
 .image-container {
@@ -12,19 +15,27 @@ main {
 }
 
 .CRUD-functions {
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
     width: 90%;
     height: 800px;
     margin: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
-    /*background: linear-gradient(89.5deg, rgb(4, 29, 55) -0.1%, rgb(47, 71, 139) 25.1%, rgb(28, 133, 243) 49.6%, rgb(115, 181, 250) 74.5%, rgb(214, 239, 253) 99.3%);*/
 }
+
+.page {
+    text-align: center;
+}
+
+
+.CRUD-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.CRUD-list li {
+    margin-bottom: 10px;
+}
+
 
 .CRUD-functions li {
     list-style-type: none;
@@ -70,8 +81,9 @@ h1{
 }
 
 .page{
-    padding-top: 20%;
-    margin-left: 19%;
+    margin-top: 10%;
+    padding-right: 47%;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     color: papayawhip;
 }

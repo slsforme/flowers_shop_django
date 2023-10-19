@@ -1,21 +1,17 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FlowersShop - Розы</title>
-    <link rel="stylesheet" href="{% static 'routing/css/rosesStyle.css' %}">
-</head>
-<body>
-    <header></header>
-    <main>
-        <div class="links">
-            <a href="{% url 'Flowers Catalogue' %}">Вернуться на страницу каталога</a><br>
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'routing/css/flowersStyles/rosesStyle.css' %}">
+{% endblock links %}
+
+{% block title %}
+    FlowersShop - Розы
+{% endblock title %}
+
+{% block main %}
+    <div class="links">
+            <a href="{% url 'Flowers Catalogue' %}"></a>
             <a href="{% url 'Create Positions'%}">Добавить позицию</a>
-        </div>
-    </main>
-</body>
-</html>
+    </div>
+{% endblock main %}
