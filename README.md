@@ -12,7 +12,7 @@ I used here:
 
 -  Fully Make front-end by myself
 
--  Add some SCSS and learn it by using it in this project
+-  Add some SCSS and Tailwind CSS and learn it by using it in this project
 
 - Fully make back-end
 
