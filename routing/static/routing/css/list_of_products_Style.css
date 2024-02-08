@@ -1,0 +1,38 @@
+@import "defaultStyle.css";
+
+.products{
+    width: 80%;
+    margin-left: 10%;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tag-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: papayawhip;
+    text-decoration: none;
+    color: black;
+}
+
+.products a{
+    font-size: medium;
+
+}
+
+h5 a{
+    color: black;
+}
+
+.products a:hover{
+    color: papayawhip;
+}
+

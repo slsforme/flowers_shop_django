@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static "routing/css/defaultStyle.css" %}">
+{% endblock links %}
+
+{% block main %}
+    <h2>ID: {{ order.id }}</h2>
+    <h3>Адрес: {{ order.deliver_address }}</h3>
+    <h4>номер Телефона: {{ order.phone_number }}</h4>
+{% endblock main %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'routing/css/CRUD_pagesStyles/add_flowersStyle.css' %}">
+{% endblock links %}
+
+{% block title %}
+    Create Positions
+{% endblock title %}
+
+{% block main %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить</button>
+    </form>
+
+    <a href="{% url 'API' %}">Вернуться обратно</a><br>
+{% endblock main %}

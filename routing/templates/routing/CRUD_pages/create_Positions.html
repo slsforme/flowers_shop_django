@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
 {% load static %}
 
 {% block links %}
@@ -10,5 +11,13 @@
 {% endblock title %}
 
 {% block main %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% comment Не работает... %} {{ form|crispy }} {% endcomment %}
+        <button type="submit">Добавить</button>
+    </form>
+
     <a href="{% url 'API' %}">Вернуться обратно</a><br>
 {% endblock main %}

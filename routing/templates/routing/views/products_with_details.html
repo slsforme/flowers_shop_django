@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'routing/css/detailized_product_Style.css' %}">
+{% endblock links %}
+
+{% block title %}
+    FlowersShop
+{% endblock title %}
+
+{% block main %}
+
+    <div class="product">
+        <img src="{{ product.image.url }}" width="600" height="600" alt="flowers">
+        <h2>Имя: {{ product.name }}</h2>
+        <h3>Цена: {{ product.price }}</h3>
+        <h4>Количество цветов: {{ product.quantity }}</h4>
+        <h5>Тэги:</h5>
+        {% for tag in product.tag.all %}
+            <p>{{ tag.name }}</p>
+        {% endfor %}
+    </div>
+
+
+
+{% endblock main %}

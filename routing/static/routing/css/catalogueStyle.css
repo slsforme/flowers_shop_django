@@ -5,10 +5,18 @@
     font-size: large;
 }
 
+.card .--bs-card-border-radius{
+    border-radius: 40px;
+}
+.links a:hover{
+    color:black;
+}
+
 a:hover{
     color:papayawhip;
-    transition: color .5s;
+    transition: color 0.5s;
 }
+
 
 main{
     background: linear-gradient(black,papayawhip);
@@ -29,6 +37,10 @@ h1{
     transform: scale(1.35);
 }
 
+h5{
+    text-align: center;
+}
+
 .cards{
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +49,20 @@ h1{
 
 p{
     font-family: 'Raleway', sans-serif;
+
+}
+p .card-text {
+     text-align: justify;
+}
+
+.links{
+    display: flex;
+    margin-top:10%;
+    width: 70%;
+    margin-left: 15%;
+    height: 60px;
+    justify-content: space-between;
+
 }
 
 

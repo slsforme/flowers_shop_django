@@ -1,0 +1,7 @@
+@import "defaultStyle.css";
+
+.product{
+    width: 46%;
+    margin-left: 27%;
+    text-align: justify;
+}

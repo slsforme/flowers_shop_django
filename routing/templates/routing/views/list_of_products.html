@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href ={% static 'routing/css/list_of_products_Style.css' %}>
+{% endblock links %}
+
+{% block title %}
+    FlowersShop - Все товары
+{% endblock title %}
+
+
+{% block main %}
+    <div class="products">
+    {% for product in products %}
+        <div class="card" style="width: 18rem;">
+          <img src="{{ product.image }}" class="card-img-top" alt="flower">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'Product Information' product.id %}">{{ product.name }}</a></h5>
+              <ul class="tag-list">
+                  {% for tag in product.tag.all %}
+                      <li class="tag"><a>{{ tag.name }}</a></li>
+                      {% endfor %}
+              </ul>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock main %}

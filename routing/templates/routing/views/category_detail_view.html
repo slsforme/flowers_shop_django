@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}]
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'routing/css/defaultStyle.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h2>Имя категории: {{ category.name }}</h2>
+        <h3>Описание: </h3>
+        <p>{{ category.description }}</p>
+    </div>
+{% endblock main %}
