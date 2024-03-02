@@ -1,19 +1,12 @@
 {% load static %}
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% include "inc/_links.html" %}
     {% block links %}
         {% comment "Можно реализовать доп. ссылки, но не обязательно" %}
         {%  endcomment %}
     {% endblock links %}
     <title>{% block title %}{% endblock title %}</title>
-</head>
+
 <body>
     <header>
         {% include "inc/_header.html" %}
