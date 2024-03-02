@@ -1,0 +1,23 @@
+@import "defaultStyle.css";
+
+.tag {
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  background-color: #000;
+  margin-right: 5px;
+    border-radius: 30px;
+    text-align: center;
+}
+.tags{
+    margin-top: 5%;
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.tags a{
+    font-size: larger;
+}

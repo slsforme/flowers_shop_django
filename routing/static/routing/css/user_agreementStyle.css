@@ -1,0 +1,13 @@
+@import "defaultStyle.css";
+
+h1{
+    text-align: center;
+}
+
+.agreement{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    height: 1000px;
+    /*display: flex;*/
+}

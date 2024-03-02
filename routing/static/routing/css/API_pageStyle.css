@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
 
 
+main{
+    height: 0;
+}
+
 nav {
     position: relative;
     background-image: url("../../routing/img/dark-theme-golden-image.jpg");

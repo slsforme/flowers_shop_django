@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href ={% static 'routing/css/sign_pageStyle.css' %}>
+{% endblock links %}
+
+{% block title %}
+    Sign Up / Sign In
+{% endblock title %}
+
+{% block main %}
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Создайте аккаунт</h1>
+                <span>Используйте свой email для регистрации :)</span>
+                <label>
+                    <input type="text" placeholder="Имя">
+                </label>
+                <label>
+                    <input type="email" placeholder="Email">
+                </label>
+                <label>
+                    <input type="password" placeholder="Пароль">
+                </label>
+                <button>Зарегистрироваться </button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Войдите</h1>
+                <span>Welcome back!</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Пароль">
+                <a href="#">Забыли свой пароль?</a>
+                <button>Войти</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Добро пожаловать!</h1>
+                    <p>Войдите в свой аккаунт для возможности заказа и отслеживания букетов.</p>
+                    <button class="hidden" id="login">Вход</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Здравствуй!</h1>
+                    <p>Пройдите регистрацию для возможности заказа и отслеживания букетов.</p>
+                    <button class="hidden" id="register">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}
+
+{% block script %}
+    <script>
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+        });
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+        });
+    </script>
+{% endblock script %}

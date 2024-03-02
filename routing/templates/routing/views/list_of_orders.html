@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href ={% static 'routing/css/tags_Style.css' %}>
+{% endblock links %}
+
+{% block title %}
+    FlowersShop - Все заказы
+{% endblock title %}
+
+{% block main %}
+    <div class="orders">
+    {% for order in orders %}
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ order.id }}</h5>
+                    <p class="card-text">{{ order.deliver_address }} / {{ order.phone_number }}</p>
+                  </div>
+                  <div class="card-body">
+
+                  </div>
+                </div>
+            {% endfor %}
+    </div>
+
+
+
+    <a href="{% url 'Home' %}">Вернуться обратно</a>
+{% endblock main %}

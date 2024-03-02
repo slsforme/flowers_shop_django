@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href ={% static 'routing/css/tags_Style.css' %}>
+{% endblock links %}
+
+{% block title %}
+    FlowersShop - Тэги
+{% endblock title %}
+
+{% block main %}
+    <div class="tags">
+        {% for tag in tags %}
+            <a class="tag" href="{% url 'Products By Tag' tag.id %}" class="tag">{{ tag.name }}</a>
+        {% endfor %}
+    </div>
+
+
+
+    <a href="{% url 'Home' %}">Вернуться обратно</a>
+{% endblock main %}

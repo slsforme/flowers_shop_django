@@ -1,0 +1,11 @@
+@import "defaultStyle.css";
+
+
+.cards{
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
